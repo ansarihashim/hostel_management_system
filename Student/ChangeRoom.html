@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" href="StdDashboard.css">
+
+    <style>
+        header{position: relative;}
+        .change-password-container{
+            display: flex;
+            margin-top: -4rem;
+            justify-content: center;
+            width: 100%;
+            height: 85vh;
+        }
+        .change-password-container form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: var(--border-radius-2);
+            padding : 3.5rem;
+            background-color: var(--color-white);
+            box-shadow: var(--box-shadow);
+            width: 95%;
+            max-width: 32rem;
+        }
+        .change-password-container form:hover{box-shadow: none;}
+        .change-password-container form input[type=text],input[type="number"]{
+            border: none;
+            outline: none;
+            border: 1px solid var(--color-light);
+            background: transparent;
+            height: 2rem;
+            width: 100%;
+            padding: 0 .5rem;
+        }
+        .change-password-container form .box{
+            padding: .5rem 0;
+        }
+        .change-password-container form .box p{
+            line-height: 2;
+        }
+        .change-password-container form h2+p{margin: .4rem 0 1.2rem 0;} 
+        .btn{
+            background: none;
+            border: none;
+            border: 2px solid var(--color-primary) !important;
+            border-radius: var(--border-radius-1);
+            padding: .5rem 1rem;
+            color: var(--color-white);
+            background-color: var(--color-primary);
+            cursor: pointer;
+            margin: 1rem 1.5rem 1rem 0;
+            margin-top: 1.5rem;
+        }
+        .btn:hover{
+            color: var(--color-primary);
+            background-color: transparent;
+        }
+        .radio-container input[type="radio"] + label {
+            margin-right: 30px; /* Adjust the margin for spacing between radio buttons */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png" alt="">
+            <h2>CH<span class="danger">MS</span></h2>
+        </div>
+        <div class="navbar">
+            <a href="StdDashboard.html">
+                <span class="material-icons-sharp">home</span>
+                <h3>Home</h3>
+            </a>
+            <a href="StdChangePassword.html">
+                <span class="material-icons-sharp">password</span>
+                <h3>Change Password</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+        <div id="profile-btn" style="display: none;">
+            <span class="material-icons-sharp">person</span>
+        </div>
+        <div class="theme-toggler">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="change-password-container">
+            <form action="">
+                <h2>REQUEST FOR ROOM CHANGE</h2>
+                <div class="box">
+                    <p class="text-muted">Hostel ID</p>
+                    <input type="text" id="hid">
+                </div>
+                <div class="box">
+                    <p class="text-muted">Name</p>
+                    <input type="text" id="name">
+                </div>
+                <div class="box">
+                    <p class="text-muted">Current Room no.</p>
+                    <input type="number" id="roomno">
+                </div>
+                <div class="box">
+                    <p class="text-muted">New Room Type</p>
+                    <div class="radio-container">
+                        <input type="radio" name="roomType" id="acRoom" value="A/C" required>
+                        <label for="acRoom">A/C</label>
+                        <input type="radio" name="roomType" id="nonAcRoom" value="Non A/C" required>
+                        <label for="nonAcRoom">Non A/C</label>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="text-muted">New Room Size</p>
+                    <div class="radio-group">
+                        <input type="radio" id="1-bed" name="room-type" value="1Bed(No RoomMate)">
+                        <label for="1-bed">1 Bed (No RoomMate)</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="2-bed" name="room-type" value="2Bed(1 RoomMate)">
+                        <label for="2-bed">2 Bed (1 RoomMate)</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="3-bed" name="room-type" value="3Bed(2 RoomMate)">
+                        <label for="3-bed">3 Bed (2 RoomMate)</label>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="text-muted">Reason</p>
+                    <textarea id="message" rows="4" cols="45"></textarea>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Submit" class="btn">
+                    <a href="StdDashboard.html" class="text-muted">Cancel</a>
+                </div>
+            </form>    
+        </div>
+
+</body>
+
+<script src="StdDashboard.js"></script>
+</html>

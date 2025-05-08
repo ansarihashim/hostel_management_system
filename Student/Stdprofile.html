@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" href="StdDashboard.css">
+
+    <style>
+        body{overflow: hidden;}
+        header{position: relative;}
+
+        .container {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            flex-direction: column; /* Center vertically */
+        }
+
+        /* Add space between cards and controls */
+        .cards {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: auto; /* Align at the bottom */
+        }
+
+        input[type=radio] {
+            display: none;
+        }
+
+        .cards {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card {
+            flex: 0 0 100%;
+            padding: 20px;
+            text-align: center;
+            margin-top: -3rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .info {
+            margin-top: 20px;
+        }
+
+        .info h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .info p {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .controls label {
+            cursor: pointer;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+
+        .controls label:hover {
+            background-color: #999;
+        }
+
+        .controls label.active {
+            background-color: #333;
+        }
+
+        #item-1:checked ~ .cards {
+            transform: translateX(0);
+        }
+
+        #item-2:checked ~ .cards {
+            transform: translateX(-100%);
+        }
+
+        #item-3:checked ~ .cards {
+            transform: translateX(-200%);
+        }
+
+        #item-4:checked ~ .cards {
+            transform: translateX(-300%);
+        }
+
+        #item-5:checked ~ .cards {
+            transform: translateX(-400%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png" alt="">
+            <h2>CH<span class="danger">MS</span></h2>
+        </div>
+        <div class="navbar">
+            <a href="StdDashboard.html">
+                <span class="material-icons-sharp">home</span>
+                <h3>Home</h3>
+            </a>
+            <a href="StdChangePassword.html">
+                <span class="material-icons-sharp">password</span>
+                <h3>Change Password</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+        <div id="profile-btn" style="display: none;">
+            <span class="material-icons-sharp">person</span>
+        </div>
+        <div class="theme-toggler">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <input type="radio" name="slider" id="item-1" checked>
+            <input type="radio" name="slider" id="item-2">
+            <input type="radio" name="slider" id="item-3">
+            <input type="radio" name="slider" id="item-4">
+            <input type="radio" name="slider" id="item-5">
+            <div class="cards">
+                <label class="card" for="item-1">
+                    <div class="info">
+                        <h2>Personal Details</h2>
+                        <p>Full Name: John Doe</p>
+                        <p>DOB: January 15, 1995</p>
+                        <p>Age: 28</p>
+                        <p>Gender: Male</p>
+                        <p>Contact No: +1 (123) 456-7890</p>
+                        <p>Email ID: john.doe@example.com</p>
+                        <p>Aadhar Number: 1234-5678-9012</p>
+                        <p>Blood Group: A+</p>
+                        <p>Address: 123 Main Street, Cityville</p>
+                    </div>
+                </label>
+                <label class="card" for="item-2">
+                    <div class="info">
+                        <h2>Parents Details</h2>
+                        <h3>Father</h3>
+                        <p>Full Name: John's Father</p>
+                        <p>Occupation: Engineer</p>
+                        <p>Contact No: +1 (123) 456-7890</p>
+                        <h3>Mother</h3>
+                        <p>Full Name: John's Mother</p>
+                        <p>Occupation: Teacher</p>
+                        <p>Contact No: +1 (987) 654-3210</p>
+                    </div>
+                </label>
+                <label class="card" for="item-3">
+                    <div class="info">
+                        <h2>Institute Details</h2>
+                        <p>College Name: ABC College</p>
+                        <p>Degree/Course: Computer Science</p>
+                        <p>Academic Year: 3rd Year</p>
+                        <p>PRN no/Roll no: 123456</p>
+                    </div>
+                </label>
+                <label class="card" for="item-4">
+                    <div class="info">
+                        <h2>Other Details</h2>
+                        <p>Room Type: A/C Single</p>
+                        <p>Mess: Yes</p>
+                        <p>Mess Timings: Breakfast, Lunch, Dinner</p>
+                        <p>Laundry: Yes</p>
+                    </div>
+                </label>
+                <label class="card" for="item-5">
+                    <div class="info">
+                        <h2>Documents Details</h2>
+                        <p>Aadhar Card: View Option</p>
+                        <p>College ID Card: View Option</p>
+                        <p>Photo: View Option</p>
+                    </div>
+                </label>
+            </div>
+            <div class="controls">
+                <label class="active" for="item-1"></label>
+                <label for="item-2"></label>
+                <label for="item-3"></label>
+                <label for="item-4"></label>
+                <label for="item-5"></label>
+            </div>
+        </div>
+    
+    </main>
+    <script>
+        // Get all radio inputs and labels
+        const radioInputs = document.querySelectorAll('input[type="radio"]');
+        const labels = document.querySelectorAll('.controls label');
+
+        // Add event listeners to the radio inputs
+        radioInputs.forEach((input, index) => {
+            input.addEventListener('change', () => {
+                // Reset active class on labels
+                labels.forEach(label => label.classList.remove('active'));
+                // Set the active class on the selected label
+                labels[index].classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+<script src="StdDashboard.js"></script>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" href="StdDashboard.css">
+
+    <style>
+        body{overflow: hidden;}
+        header{position: relative;}
+        main .roommates{
+            margin-top: -5.5rem;
+        }
+        main .roommates h2{
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+        }
+        main .roommates table{
+            background-color: var(--color-white);
+            width: 100%;
+            border-radius: var(--card-border-radius);
+            padding: var(--card-padding);
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: all 300ms ease;
+        }
+        main .roommates span{display: none;}
+        main .roommates table:hover{box-shadow: none;}
+        main table tbody td{
+            height: 2.8rem;
+            border-bottom: 1px solid var(--color-light);
+            color: var(--color-dark-varient);
+        }
+        main table tbody tr:last-child td{border: none;}
+        .roommates div{
+            position: relative;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .roommates{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 80vh;
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png" alt="">
+            <h2>CH<span class="danger">MS</span></h2>
+        </div>
+        <div class="navbar">
+            <a href="StdDashboard.html">
+                <span class="material-icons-sharp">home</span>
+                <h3>Home</h3>
+            </a>
+            <a href="StdChangePassword.html">
+                <span class="material-icons-sharp">password</span>
+                <h3>Change Password</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+        <div id="profile-btn" style="display: none;">
+            <span class="material-icons-sharp">person</span>
+        </div>
+        <div class="theme-toggler">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="roommates">
+            <h2>RoomMates Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hostel ID</th>
+                        <th>Name</th>
+                        <th>Contact no.</th>
+                        <th>Email id</th>
+                        <th>Room no.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>H36549</td>
+                        <td>Aatif Ahmed</td>
+                        <td>7059846446</td>
+                        <td>ideapadaatif@gmail.com</td>
+                        <td>108</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+<script src="StdDashboard.js"></script>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StudentReg.css">
+    <script src="StudentReg.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>Registration Form</title>
+</head>
+<body>
+    <form action="#" class="form">
+        <h1 class="text-center">Registration Form</h1>
+        <!-- Progress bar -->
+        <div class="progressbar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step progress-step-active" data-title="Personal Details"></div>
+            <div class="progress-step" data-title="Parents Details"></div>
+            <div class="progress-step" data-title="Institute Details"></div>
+            <div class="progress-step" data-title="Other Details"></div>
+            <div class="progress-step" data-title="Documents"></div>
+        </div>
+
+        <!-- Personal Details -->
+        <div class="form-step form-step-active">
+            <h2>Personal Details</h2>
+            <div class="input-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" name="fullName" id="fullName" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="dob" id="dob" required>
+            </div>
+            <div class="input-group">
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" placeholder="Age" readonly>
+            </div>
+            <div class="input-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" name="gender" id="male" value="Male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="Female" required>
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="contactNo">Contact No</label>
+                <input type="tel" name="contactNo" id="contactNo" placeholder="Contact No" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <label for="aadharNumber">Aadhar Number</label>
+                <input type="text" name="aadharNumber" id="aadharNumber" placeholder="Aadhar Number" required>
+            </div>
+            <div class="input-group">
+                <label for="bloodGroup">Blood Group</label>
+                <input type="text" name="bloodGroup" id="bloodGroup" placeholder="Blood Group" required>
+            </div>
+            <div class="input-group">
+                <label for="address">Address</label>
+                <input type= "text" name="address" id="address" rows="4" placeholder="Address" required>
+            </div>
+            <div class="btns-group">
+                <button type="button" class="btn btn-next" onclick="nextStep()">Next</button>
+            </div>
+        </div>
+
+        <!-- Parents Details -->
+        <div class="form-step">
+            <h2>Parents Details</h2>
+            <!-- Father Section -->
+            <div class="side-heading">Father</div>
+            <div class="input-group">
+                <label for="fatherName">Full Name</label>
+                <input type="text" name="fatherName" id="fatherName" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <label for="fatherOccupation">Occupation</label>
+                <input type="text" name="fatherOccupation" id="fatherOccupation" placeholder="Occupation" required>
+            </div>
+            <div class="input-group">
+                <label for="fatherContact">Contact No</label>
+                <input type="tel" name="fatherContact" id="fatherContact" placeholder="Contact No" required>
+            </div>
+
+            <!-- Mother Section -->
+            <div class="side-heading">Mother</div>
+            <div class="input-group">
+                <label for="motherName">Full Name</label>
+                <input type="text" name="motherName" id="motherName" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <label for="motherOccupation">Occupation</label>
+                <input type="text" name="motherOccupation" id="motherOccupation" placeholder="Occupation" required>
+            </div>
+            <div class="input-group">
+                <label for="motherContact">Contact No</label>
+                <input type="tel" name="motherContact" id="motherContact" placeholder="Contact No" required>
+            </div>
+            <div class="btns-group">
+                <button type="button" class="btn btn-prev" onclick="prevStep()">Prev</button>
+                <button type="button" class="btn btn-next" onclick="nextStep()">Next</button>
+            </div>
+        </div>
+
+        <!-- Institute Details -->
+        <div class="form-step">
+            <h2>Institute Details</h2>
+            <!-- Include your input fields for Institute Details here -->
+            <div class="input-group">
+                <label for="collegeName">College Name</label>
+                <input type="text" name="collegeName" id="collegeName" placeholder="College Name" required>
+            </div>
+            <div class="input-group">
+                <label for="degreeCourse">Degree/Course</label>
+                <input type="text" name="degreeCourse" id="degreeCourse" placeholder="Degree/Course" required>
+            </div>
+            <div class="input-group">
+                <label>Year</label>
+                <div class="radio-group">
+                    <input type="radio" name="year" id="firstYear" value="1st Year" required>
+                    <label for="firstYear">1st Year</label>
+                    <input type="radio" name="year" id="secondYear" value="2nd Year" required>
+                    <label for="secondYear">2nd Year</label>
+                    <input type="radio" name="year" id="thirdYear" value="3rd Year" required>
+                    <label for="thirdYear">3rd Year</label>
+                    <input type="radio" name="year" id="fourthYear" value="4th Year" required>
+                    <label for="fourthYear">4th Year</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="prnRollNo">PRN no/Roll no</label>
+                <input type="number" name="prnRollNo" id="prnRollNo" placeholder="PRN no/Roll no" required>
+            </div>
+            <div class="btns-group">
+                <button type="button" class="btn btn-prev" onclick="prevStep()">Prev</button>
+                <button type="button" class="btn btn-next" onclick="nextStep()">Next</button>
+            </div>
+        </div>
+
+        <!-- Other Details -->
+        <div class="form-step">
+            <h2>Other Details</h2>
+            <!-- Include your input fields for Other Details here -->
+            <div class="input-group">
+                <label>Room Type</label>
+                <div class="radio-group">
+                    <input type="radio" name="roomType" id="acRoom" value="A/C" required>
+                    <label for="acRoom">A/C</label>
+                    <input type="radio" name="roomType" id="nonAcRoom" value="Non A/C" required>
+                    <label for="nonAcRoom">Non A/C</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="1-bed" name="room-type" value="1Bed(No RoomMate)">
+                    <label for="1-bed">1 Bed (No RoomMate)</label>
+                    <input type="radio" id="2-bed" name="room-type" value="2Bed(1 RoomMate)">
+                    <label for="2-bed">2 Bed (1 RoomMate)</label>
+                    <input type="radio" id="3-bed" name="room-type" value="3Bed(2 RoomMate)">
+                    <label for="3-bed">3 Bed (2 RoomMate)</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Mess</label>
+                <div class="radio-group">
+                    <input type="radio" name="mess" id="messYes" value="Yes" required>
+                    <label for="messYes">Yes</label>
+                    <input type="radio" name="mess" id="messNo" value="No" required>
+                    <label for="messNo">No</label>
+                </div>
+            </div>
+            <div class="mess-timings" id="messTimingsContainer">
+                <label>Mess Timings</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="breakfast" id="breakfast">
+                    <label for="breakfast">Breakfast</label>
+                    <input type="checkbox" name="lunch" id="lunch">
+                    <label for="lunch">Lunch</label>
+                    <input type="checkbox" name="dinner" id="dinner">
+                    <label for="dinner">Dinner</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Laundry</label>
+                <div class="radio-group">
+                    <input type="radio" name="laundry" id="laundryYes" value="Yes" required>
+                    <label for="laundryYes">Yes</label>
+                    <input type="radio" name="laundry" id="laundryNo" value="No" required>
+                    <label for="laundryNo">No</label>
+                </div>
+            </div>
+            <div class="btns-group">
+                <button type="button" class="btn btn-prev" onclick="prevStep()">Prev</button>
+                <button type="button" class="btn btn-next" onclick="nextStep()">Next</button>
+            </div>
+        </div>
+
+        <!-- Documents Details -->
+        <div class="form-step">
+            <h2>Documents</h2>
+            <!-- Include your input fields for Documents Details here -->
+            <div class="input-group">
+                <label for="aadharCard">Aadhar Card (PDF only)</label>
+                <input type="file" name="aadharCard" id="aadharCard" accept=".pdf" required>
+            </div>
+            <div class="input-group">
+                <label for="collegeIDCard">College ID Card (Image only)</label>
+                <input type="file" name="collegeIDCard" id="collegeIDCard" accept="image/*" required>
+            </div>
+            <div class="input-group">
+                <label for="photo">Photo (Image only)</label>
+                <input type="file" name="photo" id="photo" accept="image/*" required>
+            </div>
+            <div class="btns-group">
+                <button type="button" class="btn btn-prev" onclick="prevStep()">Prev</button>
+                <button type="button" class="btn btn-submit" onclick="submitForm()">Submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

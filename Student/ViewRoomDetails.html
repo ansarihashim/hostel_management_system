@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" href="StdDashboard.css">
+
+    <style>
+        body{overflow: hidden;}
+        header{position: relative;}
+        .center {
+            display: flex;
+            justify-content: center;
+            min-height: auto;
+            margin-top: 12rem;
+        }
+        .room-card {
+            background-color: var(--color-white);
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: all 300ms ease; /* Add the transition effect */
+            border-radius: var(--card-border-radius);
+            position: relative;
+        }
+        .room-card:hover {
+            box-shadow: none; /* Remove the box-shadow on hover */
+        }
+        .room-card h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-align: center;
+            padding-top: -3rem;
+            text-decoration: underline;
+        }
+        .room-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .room-card b { 
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png" alt="">
+            <h2>CH<span class="danger">MS</span></h2>
+        </div>
+        <div class="navbar">
+            <a href="StdDashboard.html">
+                <span class="material-icons-sharp">home</span>
+                <h3>Home</h3>
+            </a>
+            <a href="StdChangePassword.html">
+                <span class="material-icons-sharp">password</span>
+                <h3>Change Password</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+        <div id="profile-btn" style="display: none;">
+            <span class="material-icons-sharp">person</span>
+        </div>
+        <div class="theme-toggler">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="center">
+            <div class="room-card">
+                <h2>Room Details</h2>
+                <div class="room-info">
+                    <p><b>Hostel ID:</b> H12345</p>
+                    <p><b>Name:</b> John Doe</p>
+                    <p><b>Room No:</b> 101</p>
+                    <p><b>Room Type:</b> Single</p>
+                    <p><b>Room Size:</b> 200 sq. ft.</p>
+                    <p><b>Room Mates:</b> Alice, Bob</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="StdDashboard.js"></script>
+</html>

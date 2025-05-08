@@ -1,0 +1,118 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #daf6ff;
+    overflow: hidden;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#f6f6f9;
+    z-index: -1;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    border: solid #1089D3;
+    border-radius: 35px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px
+}
+
+.card {
+    background-color: #ffffff; /* Updated card background with transparency */
+    border-radius: 35px;
+    padding: 30px;
+}
+
+h1 {
+    color: #0a2e38;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #007ACC;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #CBD4E3;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.role-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.login-button {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(45deg, #0a2e38 0%, #12B1D1 100%); /* Updated button background */
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.admin-button {
+    background: linear-gradient(45deg, #0a2e38 0%, #12B1D1 100%); /* Updated background for admin button */
+}
+
+.student-button {
+    background: linear-gradient(45deg, #0a2e38 0%, #12B1D1 100%); /* Updated background for student button */
+}
+
+.login-button:hover {
+    background: linear-gradient(45deg, #007ACC 0%, #12B1D1 100%); /* Darker background on hover */
+}
+
+.clock {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Positioned at the top right corner */
+    font-family: "Share Tech Mono", monospace;
+    text-align: center;
+    color: #daf6ff;
+}
+
+#time {
+    letter-spacing: 0.05em;
+    font-size: 36px;
+    padding: 5px 0;
+    margin-top: -25px; /* Adjust the margin to reduce vertical space */
+}
+
+#date {
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    margin-top: 10px; /* Adjust the margin to reduce vertical space */
+}
+

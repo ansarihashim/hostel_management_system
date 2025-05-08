@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="StdDashboard.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo" title="Hostel Management System">
+            <img src="./images/logo.png" style="margin-top: 15px;" alt="">
+            <h2 style="margin-top: 15px; font-size: 20px;">CH<span class="danger">MS</span></h2>
+        </div>
+
+        <div class="navbar">
+            <a href="StdDashboard.html" class="active">
+                <span class="material-icons-sharp">home</span>
+                <h3>Home</h3>
+            </a>
+            <a href="StdChangePassword.html">
+                <span class="material-icons-sharp">password</span>
+                <h3>Change Password</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp" onclick="">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+        <div id="profile-btn">
+            <span class="material-icons-sharp">person</span>
+        </div>
+        <div class="theme-toggler">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+        </div>
+        
+    </header>
+    <div class="container">
+        <aside>
+            <div class="profile">
+                <div class="top">
+                    <div class="profile-photo">
+                        <img src="./images/profile-1.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <p><b>Waleed Bin Juman Bahakim</b></p>
+                        <small class="text-muted">H220001</small>
+                    </div>
+                </div>
+                    <div class="about">
+                    <h5>College</h5>
+                    <p>Deogiri Institute of Engineering and Management Studies.</p>
+                    <h5>DOB</h5>
+                    <p>08-Feb-2003</p>
+                    <h5>Contact</h5>
+                    <p>9607553090</p>
+                    <h5>Email</h5>
+                    <p>waleedbahakim123@gmail.com</p>
+                    <h5>Address</h5>
+                    <p>Flat No. B1 Emerald Bldg. Green Valley near Kohinoor lawns, Aurangabad</p>
+                    <a href="Stdprofile.html" class="completeprofile">
+                        <small>View Complete Profile</small>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <h2>Welcome to,</h2>
+            <h1>Student DashBoard</h1>
+            <div class="Action-Cards">
+                
+                <div class="RoomDetails">
+                    <span class="material-icons-sharp">home</span>
+                    <a href="ViewRoomDetails.html">
+                        <h3>My RoomDetails</h3>
+                    </a>
+                </div>
+                <div class="RoomMates">
+                    <span class="material-icons-sharp">wc</span>
+                    <a href="ViewRoomMates.html">
+                        <h3>View RoomMates</h3>
+                    </a>
+                </div>
+                <div class="FeeDetails">
+                    <span class="material-icons-sharp">payments</span>
+                    <a href="ViewFeeDetails.html">
+                    <h3>View FeeDetails</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="Action-Cards1">
+                <div class="ChangeRoom">
+                    <span class="material-icons-sharp">bed</span>
+                    <a href="ChangeRoom.html" >
+                        <h3>Change Room</h3>
+                    </a>
+                </div>
+                <div class="Contact-Support">
+                    <span class="material-icons-sharp">contact_support</span>
+                    <a href="ContactSupport.html" >
+                        <h3>Contact Admin</h3>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <div class="right">
+            <div class="announcements">
+                <h2>Announcements</h2>
+                <div class="updates">
+                    <div class="message">
+                        <p> <b>Academic</b> Summer training internship with Live Projects.</p>
+                        <small class="text-muted">2 Minutes Ago</small>
+                    </div>
+                    <div class="message">
+                        <p> <b>Co-curricular</b> Global internship opportunity by Student organization.</p>
+                        <small class="text-muted">10 Minutes Ago</small>
+                    </div>
+                    <div class="message">
+                        <p> <b>Examination</b> Instructions for Mid Term Examination.</p>
+                        <small class="text-muted">Yesterday</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="StdDashboard.js"></script>
+</body>
+</html>
